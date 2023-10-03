@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>CAR REGISTRATION</ion-title>
+  </ion-toolbar>
+</ion-header>
+  
+  <ion-content>
+    <div>
+    <form (ngSubmit)="submit()" [formGroup]='carform'>
+    <ion-item>
+      <ion-label position="floating">
+        car Name
+      </ion-label>
+      <ion-input type="text" formControlName="carname" placeholder="enter car name"></ion-input>
+  
+      <ion-list>
+        <ion-item>
+          <ion-select placeholder="Select fuelname" formControlName="fuelname">
+            <ion-select-option value="" disabled>--Select Fueltype--</ion-select-option>
+            <ion-select-option *ngFor="let c of fuel" value="{{c.fuelname}}">{{c.fuelname}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    <!-- <ion-item>
+      <ion-label position="floating">
+        car model Name
+      </ion-label>
+      <ion-input type="text" formControlName="carmodelname" placeholder="enter car model name"></ion-input>
+  
+    </ion-item> -->
+    <ion-list>
+      <ion-item>
+        <ion-select placeholder="Select model name" formControlName="carmodelname">
+          <ion-select-option value="" disabled>--Select carmodelname--</ion-select-option>
+          <ion-select-option *ngFor="let c of model" value="{{c.carmodelname}}">{{c.carmodelname}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-item>
+      <ion-label position="floating">
+        Customer Name
+      </ion-label>
+      <ion-input type="text" formControlName="customername" placeholder="enter customername "></ion-input>
+  
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Registration Number
+      </ion-label>
+      <ion-input type="text" formControlName="regno" placeholder="eg:KL-K-- "></ion-input>
+  
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        company Name
+      </ion-label>
+      <ion-input type="text" formControlName="companyname" placeholder="enter company name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Current Km
+      </ion-label>
+      <ion-input type="integer" formControlName="currentkm" placeholder="current kilometer"></ion-input>
+  
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Post Date
+      </ion-label>
+      <ion-input type="date" formControlName="postdate" placeholder="enter postdate "></ion-input>
+  
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Rate
+      </ion-label>
+      <ion-input type="text" formControlName="rate" placeholder="enter rate"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Description
+      </ion-label>
+      <ion-input type="text" formControlName="description" placeholder="enter description"></ion-input>
+  
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Ownership
+      </ion-label>
+      <ion-input type="text" formControlName="ownership" placeholder="enter ownership name "></ion-input>
+  
+    </ion-item>
+    <ion-item>
+      CAR IMAGES
+      <ion-label position="floating"> 
+      </ion-label>
+    <ion-input type="file" id="name" (change)="handlefile($event)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+      </ion-label>
+      <ion-input type="file" id="name1" (change)="handlefile1($event)"></ion-input>
+  
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+      </ion-label>
+      <ion-input type="file" id="name2" (change)="handlefile2($event)"></ion-input>  
+    </ion-item>
+    <ion-button color="danger" type="submit">Register</ion-button>
+    </ion-item>
+  </form>
+    </div>
+  </ion-content>
+  

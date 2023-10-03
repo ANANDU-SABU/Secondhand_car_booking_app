@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>profile edit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="update()" [formGroup]='profile'>
+    <ion-card>
+      <ion-label position="floating"> name</ion-label>
+      <ion-input formControlName="name" required></ion-input>
+    </ion-card>
+    <ion-card>
+      <ion-label position="floating">phonenumber</ion-label>
+      <ion-input formControlName="phonenumber" required></ion-input>
+    </ion-card>
+    <ion-card>
+      <ion-label position="floating">place</ion-label>
+      <ion-input formControlName="place" required></ion-input>
+    </ion-card>
+    <ion-card>
+      <ion-label position="floating">Aadhar</ion-label>
+      <ion-input formControlName="aadhar" required></ion-input>
+    </ion-card>
+    <ion-card>
+      <ion-label position="floating">username</ion-label>
+      <ion-input formControlName="username" required></ion-input>
+    </ion-card>
+    <ion-card>
+      <ion-label position="floating">password</ion-label>
+      <ion-input formControlName="password" required></ion-input>
+    </ion-card>
+   
+  
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="">update</ion-button>
+        <!-- <a [routerLink]="['']" class="small-text">Forgot Password?</a> -->
+      </ion-col>
+    </ion-row>
+
+  </form>
+  
+</ion-content>

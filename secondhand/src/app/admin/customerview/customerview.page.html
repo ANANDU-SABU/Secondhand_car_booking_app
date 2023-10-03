@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>customer details</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-item lines="full" *ngFor="let c of customer">
+      <div>
+        <div>
+          name : {{c.name}}
+        </div>
+        <br>
+        <div>
+          phonenumber : {{c.phonenumber}}
+            </div>
+            <br>
+            <div>
+              Place: {{c.place}}
+                </div>
+                <br>
+                <!-- <div>
+                  Aadhar: {{c.aadhar}}
+                    </div>
+                    <br>
+                    <div>
+                      username: {{c.username}}
+                        </div>
+                        <br>
+                            <div>
+                              password: {{c.password}}
+                                </div>
+                                <br> -->
+      
+      <!-- <button class="btn btn-info" [routerLink]= "['//profileedit']">Edit</button>  -->
+    </div>
+      </ion-item>
+    
+</ion-content>
+

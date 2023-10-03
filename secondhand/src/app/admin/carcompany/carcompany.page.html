@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>CAR COMPANY REGISTRATION</ion-title>
+  </ion-toolbar>
+</ion-header>
+  
+  <ion-content>
+    <div>
+    <form (ngSubmit)="submit()" [formGroup]='ccform'>
+    <ion-item>
+      <ion-label position="floating">
+        car company
+      </ion-label>
+      <ion-input type="text" formControlName="companyname" placeholder="enter company name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+       company logo
+      </ion-label>
+      <br><br>
+      <ion-input type="file" id="name" (change)="handlefile($event)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        opening date
+      </ion-label>
+      <ion-input type="date" formControlName="openingdate" placeholder="enter opening date"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        location
+      </ion-label>
+      <ion-input type="text" formControlName="location" placeholder="enter location name"></ion-input>
+    </ion-item>
+    
+    <ion-button color="danger" type="submit">Register</ion-button>
+    
+  </form>
+    </div>
+  </ion-content>
+  

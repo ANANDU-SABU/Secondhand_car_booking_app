@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title> Car Model report</ion-title>
+     
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let c of carmodelname;">
+    <div>
+      <br>
+      <div>
+        carmodelname :- {{c.carmodelname}}
+      </div>
+      <br>
+       <div>
+        fuelname :- {{c.fuelname}}
+      </div>
+      <br>
+        <div>
+          companyname :- {{c.companyname}}
+      </div>
+      <br> 
+      <div>
+        Image :- <img [src]="c.image" width="100px">
+        <!-- image :- {{c.image}} -->
+    </div>
+      <br>
+     
+      
+    </div>
+
+  </ion-item></ion-content>

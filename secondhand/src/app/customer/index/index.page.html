@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title> 
+      <a href="https://api.whatsapp.com/send?phone=918547975645&text=Hello.i have some doubts and know more about your car .can you help me😊"><button class="btn btn-primary">connect whatsapp</button></a>   
+      </ion-title>
+      <!-- <ion-button fill="clear" class="btn btn-primary" [routerLink]= "['/admin/carreg']">
+        Add New
+      </ion-button> -->
+      
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+<ion-footer>
+  
+  <div>
+    <ion-title>Please Search</ion-title>
+  </div>
+
+
+<form  [formGroup]='searchform'>
+  
+    <ion-list>
+      
+
+
+
+<ion-list>
+  <ion-item>
+    <ion-select placeholder="Select carname " formControlName="carmodelname" (ionChange)="submit1()">
+      <ion-select-option value="" >--Select car model name--</ion-select-option>
+      <ion-select-option *ngFor="let c of sizedata" value="{{c.carmodelname}}">{{c.carmodelname}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+    </ion-list>
+
+  </ion-list>
+  </form>
+  </ion-footer>
+  
+<ion-content>
+  <ion-card color="medium" >
+   <ion-item *ngFor="let c of sizedata;">
+    <div>
+      
+      <br>
+      <div>
+          carname ◩ {{c.carname}}
+      </div>
+      <br>
+        <div>
+          carmodelname ◩ {{c.carmodelname}}
+      </div>
+      <br>
+  <br>
+    <div>
+      
+     <img [src]="c.carimage1" width="280px"[routerLink]= "['/customer/carviewmore', c.collection_carId]" >
+    
+  </div>
+
+</div>
+</ion-item>
+</ion-card>
+<!-- <ion-footer>
+  
+    <div>
+      <ion-title>Please Search</ion-title>
+    </div>
+ 
+  
+  <form  [formGroup]='searchform'>
+    
+      <ion-list> -->
+        
+  
+  
+
+  <!-- <ion-list>
+    <ion-item>
+      <ion-select placeholder="Select carname " formControlName="carmodelname" (ionChange)="submit1()">
+        <ion-select-option value="" >--Select car model name--</ion-select-option>
+        <ion-select-option *ngFor="let c of sizedata" value="{{c.carmodelname}}">{{c.carmodelname}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    </ion-list>
+
+    </ion-list>
+    </form>
+    </ion-footer> -->
+    
+  
+
+</ion-content>
+
+  <!-- </ion-item>  -->

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      <ion-title> Requests  rejected list </ion-title>
+      <ion-button fill="clear" [routerLink]= "['/admin/request']">
+        Go Back
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar> 
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let c of request1;">
+    <ion-card-header>
+      <ion-card-title>   carname :- {{c.carname}}</ion-card-title>
+      <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+    </ion-card-header>
+        customername :- {{c.name}}
+    <ion-card-content>
+      <div>
+
+      <div>
+        rate :- {{c.rate}}
+      </div><br>
+      <div>
+        carimage1  :- <img [src]="c.carimage1" width="100px">
+    </div><br>
+    <div>
+      status :- {{c.status}}
+    </div><br>
+       
+      <!-- <button class="btn btn-info" [routerLink]= "['/Admin/rentreturn',c.collection_bookingId]">Rent return</button>   -->
+
+       </div>
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>secondhand car</ion-title>
+  </ion-toolbar>
+</ion-header>
+  
+  <ion-content>
+    <div>
+    <form (ngSubmit)="submit()" [formGroup]='catform'>
+    <ion-item>
+      <ion-label position="floating">
+        fuel type Name
+      </ion-label>
+      <ion-input type="text" formControlName="fuelname" placeholder="enter fuel name"></ion-input>
+  
+    </ion-item>
+    <ion-button color="danger" type="submit">Register</ion-button>
+    
+  </form>
+    </div>
+  </ion-content>
+  

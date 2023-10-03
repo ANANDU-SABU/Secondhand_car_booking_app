@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  
+  <form (ngSubmit)="submit()" [formGroup]='customerregister'>
+    <ion-item lines="full">
+      <ion-label position="floating">Customer Name</ion-label>
+      <ion-input type="text" formControlName="name" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Phone number</ion-label>
+      <ion-input type="text" formControlName="phonenumber" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">place</ion-label>
+      <ion-input type="text" formControlName="place" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">AADHAR NUMBER</ion-label>
+      <ion-input type="text" formControlName="aadhar" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="text" formControlName="username" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" formControlName="password" required></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="" expand="block">Register</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <!-- <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="sign in">
+        <ion-icon name="arrow-back"  [routerLink]= "['/Guest/index']"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="sign in">
+        <ion-icon name="home"  [routerLink]= "['/Guest/index']"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="sign in">
+        <ion-icon name="arrow-forward"  [routerLink]= "['/Guest/signin']"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs> -->
+</ion-content>

@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-menu-button></ion-menu-button> 
+      <ion-title> Requests </ion-title>
+      <!-- <ion-button fill="clear" [routerLink]= "['/shopowner/mechreg']">
+        Add New
+      </ion-button> -->
+    </ion-buttons>
+  </ion-toolbar> 
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let c of requestviewmore;">
+    <ion-card-header>
+      <ion-card-title> carname:- {{c.carname}}</ion-card-title>
+      <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+    </ion-card-header>
+  
+    <ion-card-content>
+      <br>
+      <div>
+
+      <div>
+        rate :- {{c.rate}}
+    </div>
+    <br>
+    <div>
+      customer: {{c.name}}
+    </div><br>
+
+      <!-- Description :- {{c.description}}<br>
+      Landmark :- {{c.landmark}}<br>
+      Pickup :- {{c.pickup}}<br> -->
+<div>
+    <img [src]="c.carimage1" width="100px">
+    </div><br>
+
+      <div>
+        status  :-{{c.status}} 
+      </div>
+
+     <div>
+          <ion-item> 
+            <ion-button fill="clear" class="btn btn-primary"
+            (click)="accept(c.collection_bookingId)">Accept</ion-button>
+            </ion-item>
+        
+            <ion-item> 
+              <ion-button fill="clear" class="btn btn-danger"
+              (click)="reject(c.collection_bookingId)">Reject</ion-button>
+              </ion-item>
+        </div>
+</div>
+    </ion-card-content>
+  </ion-card>
+  
+  
+</ion-content>
+
+
+<!-- <ion-footer>
+  
+</ion-footer> -->

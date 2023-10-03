@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title> fuel type view</ion-title>
+      <ion-button fill="clear" class="btn btn-primary" [routerLink]= "['/admin/fueltyperegistration']">
+        Add New
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let c of fueltype;">
+    <div>
+      <br>
+      <div>
+      fuelname :- {{c.fuelname}}
+      </div>
+      <br>
+      <!-- <div>
+        powertool name :- {{c.powertoolname}}
+      </div>
+      <br>
+        <div>
+        stock date:- {{c.regdate}}
+      </div>
+      <br> -->
+      
+      <br>
+     
+       <div>
+        <div> 
+          &nbsp;&nbsp;
+                 <button class="btn btn-danger" (click)="delete(c.collection_fueltypeId)">Delete</button>  
+          </div>
+          <br>
+      </div>
+    </div>
+
+  </ion-item></ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "secondhand",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

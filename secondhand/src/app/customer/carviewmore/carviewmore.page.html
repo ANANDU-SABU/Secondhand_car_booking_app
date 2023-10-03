@@ -1,0 +1,82 @@
+<ion-header>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title> Car view</ion-title>
+      
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  
+  <ion-item *ngFor="let c of carname;">
+    <div>
+      <br>
+      <div>
+          carname :- {{c.carname}}
+      </div>
+      <br>
+       <div>
+        fuelname :- {{c.fuelname}}
+      </div>
+      <br>
+        <div>
+          carmodelname :- {{c.carmodelname}}
+      </div>
+      <br> 
+      <div>
+          customername :- {{c.customername}}
+    </div>
+      <br>
+      <div>
+          companyname :- {{c.companyname}}
+      </div>
+      <br>
+       <div>
+          currentkm :- {{c.currentkm}}
+      </div>
+      <br>
+        <div>
+          postdate :- {{c.postdate}}
+      </div>
+      <br> 
+      <div>
+          rate :- {{c.rate}}
+    </div>
+    <div>
+      description :- {{c.description}}
+  </div>
+  <br>
+   <div>
+      ownership :- {{c.ownership}}
+  </div>
+  <br>
+  <div>
+    carimage1  :- <img [src]="c.carimage1" width="100px">
+  
+</div>
+<br> 
+<div>
+  carimage2  :- <img [src]="c.carimage2" width="100px">
+    
+</div>
+<br>
+<div>
+  carimage3  :- <img [src]="c.carimage3" width="100px">
+  
+</div>
+<br>
+&nbsp;&nbsp;
+<ion-content>
+  
+</ion-content>
+                  <button class="btn btn-danger" (click)="book()">Book</button>&nbsp;&nbsp;
+                  
+
+  </div>
+  </ion-item>
+  </ion-content>
+  

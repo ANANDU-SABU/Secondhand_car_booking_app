@@ -1,0 +1,82 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+        <ion-title> Car registration view</ion-title>
+        <ion-button fill="clear" class="btn btn-primary" [routerLink]= "['/admin/carreg']">
+          Add New
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+  </ion-header>
+  
+  <ion-content>
+    <ion-item *ngFor="let c of carname;">
+      <div class="wrapper-grid">
+        <div class="container">
+          <div class='banner-img'></div>
+          <!-- <img src='https://images.unsplash.com/photo-1444011283387-7b0f76371f12?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt='profile image' class="profile-img"> -->
+        <br>
+        <div>
+             carname :- {{c.carname}}
+        </div>
+        <br>
+         <div>
+           fuelname :- {{c.fuelname}}
+        </div>
+        <br>
+          <div>
+           carmodelname :- {{c.carmodelname}}
+        </div>
+        <br> 
+        <div>
+            customername :- {{c.customername}}
+      </div>
+        <br>
+        <div>
+            companyname :- {{c.companyname}}
+        </div>
+        <br>
+         <div>
+            currentkm :- {{c.currentkm}}
+        </div>
+        <br>
+          <div>
+            postdate :- {{c.postdate}}
+        </div>
+        <br> 
+        <div>
+            rate :- {{c.rate}}
+      </div>
+      <div>
+        description :- {{c.description}}
+    </div>
+    <br>
+     <div>
+        ownership :- {{c.ownership}}
+    </div>
+    <br>
+    <div>
+      carimage1  :- <img [src]="c.carimage1" width="100px">
+    
+  </div>
+  <br> 
+  <div>
+    carimage2  :- <img [src]="c.carimage2" width="100px">
+      
+</div>
+  <br>
+  <div>
+    carimage3  :- <img [src]="c.carimage3" width="100px">
+    
+  </div>
+  <br>
+    
+  </div>
+            &nbsp;&nbsp;
+            <button class="btn btn-primary" (click)="delete(c.collection_carId)">Delete</button>  
+            <!-- <br> <button class='btn'>Follow</button> -->
+  </div>
+    </ion-item></ion-content>
+    

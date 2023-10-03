@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>customer view</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-item lines="full" *ngFor="let c of profile">
+      <div>
+        <!-- <ion-card>
+          {{c}}
+        </ion-card> -->
+        <ion-card>
+        <div>
+          name : {{c.name}}
+        </div>
+        <br>
+        <div>
+          phonenumber : {{c.phonenumber}}
+            </div>
+            <br>
+            <div>
+              Place: {{c.place}}
+                </div>
+                <br>
+                <div>
+                  Aadhar: {{c.aadhar}}
+                    </div>
+                    <br>
+                    <div>
+                      username: {{c.username}}
+                        </div>
+                        <br>
+                            
+                                </ion-card>
+                                <br>
+      
+    </div>
+    
+      </ion-item>
+      
+    
+</ion-content>

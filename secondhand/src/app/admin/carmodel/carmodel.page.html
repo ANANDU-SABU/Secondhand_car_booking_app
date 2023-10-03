@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      <ion-title>CAR MODEL REGISTRATION</ion-title>
+    </ion-toolbar>
+  </ion-header>
+    
+    <ion-content>
+      <div>
+      <form (ngSubmit)="submit()" [formGroup]='modform'>
+      <ion-item>
+        <ion-label position="floating">
+          car model Name
+        </ion-label>
+        <ion-input type="text" formControlName="carmodelname" placeholder="enter car model name"></ion-input>
+    
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          Fuel type Name
+        </ion-label>
+        <ion-input type="text" formControlName="fuelname" placeholder="enter fuel name"></ion-input>
+    
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          company Name
+        </ion-label>
+        <ion-input type="text" formControlName="companyname" placeholder="enter car companyname"></ion-input>
+    
+      </ion-item>
+    <ion-item>
+    <ion-input type="file" id="name" (change)="handlefile($event)"></ion-input>
+    
+      </ion-item>
+      <ion-button type="submit">Register</ion-button>
+      
+    </form>
+      </div>
+    </ion-content>
+    

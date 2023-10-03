@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title> Car Model view</ion-title>
+      <ion-button fill="clear" class="btn btn-primary" [routerLink]= "['/admin/carmodel']">
+        Add New
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let c of carmodelname;">
+    <div>
+      <br>
+      <div>
+        carmodelname :- {{c.carmodelname}}
+      </div>
+      <br>
+       <div>
+        fuelname :- {{c.fuelname}}
+      </div>
+      <br>
+        <div>
+          companyname :- {{c.companyname}}
+      </div>
+      <br> 
+      <div>
+        <ion-card>
+      <img [src]="c.image" width="100px">
+        <!-- image :- {{c.image}} -->
+      </ion-card> 
+    </div>
+      <br>
+     
+       <div>
+        <div> 
+          &nbsp;&nbsp;
+                 <button class="btn btn-danger" (click)="delete(c.collection_carmodelId)">Delete</button>  
+          </div>
+          <br>
+      </div>
+    </div>
+
+  </ion-item></ion-content>

@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<div class="container mt-5">
+    
+  <div class="row d-flex justify-content-center">
+      
+      <div class="col-md-7">
+          
+          <div class="card p-3 py-4">
+              
+              <div class="text-center">
+                  <img src="https://www.logolynx.com/images/logolynx/90/90ae65b2d63dcc5776e4b8da976cc604.jpeg" width="100" class="rounded-circle">
+              </div>
+              
+              <ion-item lines="full" *ngFor="let c of profile">
+                <div>
+                  
+                  <div>
+                    name : {{c.name}}
+                  </div>
+                  <br>
+                  <div>
+                    phonenumber : {{c.phonenumber}}
+                      </div>
+                      <br>
+                      <div>
+                        Place: {{c.place}}
+                          </div>
+                          <br>
+                          <div>
+                            Aadhar: {{c.aadhar}}
+                              </div>
+                              <br>
+                              <div>
+                                username: {{c.username}}
+                                  </div>
+                                  <br>
+                                  <div>
+                                    password: {{c.password}}
+                                      </div>
+                                  <div class="buttons">
+                                    
+                                    <button class="btn btn-outline-primary px-4" align="text-center" [routerLink]= "['/customer/profileedit']">Edit</button>
+                                    <!-- <button class="btn btn-primary px-4 ms-3">Contact</button> -->
+                                </div>
+               
+              </div>
+            
+                </ion-item>
+              
+                  
+                  
+              </div>
+              
+             
+              
+              
+          </div>
+        
+          <div><ion-card color="secondary"><ion-button fill="clear" [routerLink]= "['/customer/index']">
+            <b>click here is it you!!->index</b>
+          </ion-button></ion-card></div>

@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      
+      
+    <ion-title> </ion-title>
+     <ion-button fill="clear" class="btn btn-primary" [routerLink]= "['/admin/acceptlist']"> 
+      Accepted list
+    </ion-button>
+     <ion-button fill="clear" class="btn btn-primary" [routerLink]= "['/admin/rejectlist']"> 
+      Rejected list
+    </ion-button>
+  </ion-buttons> 
+   </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card *ngFor="let c of request;">
+     <!-- <ion-card color="medium">  -->
+      <!-- <ion-item-divider> -->
+      <ion-card-content>
+        <div>
+        <br>
+        <div>
+          carname :- {{c.carname}}
+        </div>
+        <br>
+         <div>
+          customername :- {{c.name}}
+        </div>
+        <!-- <div>
+          fuelname  :- {{c.fuelname}}
+        </div>
+        <br>
+        <div>
+          carmodelname :- {{c.carmodelname}}
+        </div>
+        <br>
+         <div>
+          customername :- {{c.customername}}
+        </div>
+        <br> 
+        <div>
+          companyname :- {{c.companyname}}
+        </div>
+        <br>
+        <div>
+          currentkm :- {{c.currentkm}}
+        </div>
+        <br>
+        <div>
+          postdate :- {{c.postdate}}
+        </div>
+         <br> -->
+         <div>
+          rate :- {{c.rate}}
+        </div> 
+        <br>
+        <!-- <div>
+          description :- {{c.description}}
+        </div>
+        <br>
+        <div>
+          ownership :- {{c.ownership}}
+        </div>
+        <br> -->
+        <div>
+          carimage1  :- <img [src]="c.carimage1" width="100px">
+        </div>
+        <!-- <br>
+        <div>
+          carimage2  :- <img [src]="c.carimage2" width="100px">
+        </div>
+        <br>
+        <div>
+          carimage3  :- <img [src]="c.carimage3" width="100px">
+        </div> -->
+        <br>
+        <div>
+          status  :-{{c.status}} 
+        </div>
+        
+       <ion-button class="btn btn-info" [routerLink]= "['/admin/myrequestviewmore',c.collection_bookingId]">viewmore</ion-button> 
+       <ion-button class="btn btn-info" [routerLink]= "['/admin/customerview',c.customerid]">customer details</ion-button>
+      </div>
+         <!-- <ion-button (click)="accept(c.collection_bookingId)" class="btn btn-danger" >Accept</ion-button>  -->
+      <!-- <ion-button (click)="submit(c.collection_bookingId)" class="btn btn-danger" >Accept</ion-button>  -->
+      
+         
+  </ion-card-content>
+  </ion-card>
+</ion-content>
